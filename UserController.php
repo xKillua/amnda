@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
-use Validator;
+use Illuminate\Http\Request;
 
 /**
  * @group User management
@@ -15,11 +14,14 @@ class UserController extends Controller
 {
     //
     /**
-     * search for an user
+     * search for an user.
+     *
      * @bodyParam username string required search for a user by his/her username.
      */
+
     /**
-	 * Sign Up
+     * Sign Up.
+     *
      * @bodyParam Email string required .
      * @bodyParam Name string required .
      * @bodyParam Password string required .
@@ -39,15 +41,15 @@ class UserController extends Controller
      * "image" : "",
      * "Gender" : ""
      *}
-	 */
+     */
     public function SignUp(Request $request)
     {
         // body
     }
 
-
     /**
-	 * LogIn
+     * LogIn.
+     *
      * @bodyParam Email string required .
      * @bodyParam Password string required .
      * @response 404 {
@@ -63,15 +65,15 @@ class UserController extends Controller
      * "image" : "",
      * "Gender" : ""
      *}
-	 */
+     */
     public function LogIn(Request $request)
     {
         // body
     }
 
-
     /**
-	 * Show Profile
+     * Show Profile.
+     *
      * @authenticated
      * @response {
      * "Name" : "",
@@ -80,25 +82,23 @@ class UserController extends Controller
      * "Gender" : "",
      * "Updates" : []
      *}
-	 */
+     */
     public function Show_Profile(Request $request)
     {
-       // body
+        // body
     }
 
-
     /**
-	 * Log Out
-	 */
+     * Log Out.
+     */
     public function LogOut(Request $request)
     {
         // body
     }
 
-
     /**
      * @authenticated
-	 * Change Name
+     * Change Name
      * @bodyParam Password string required .
      * @bodyParam New_Name string required .
      * @response 404 {
@@ -108,16 +108,15 @@ class UserController extends Controller
      * "The New_Name field is required."
      *]
      *}
-	 */
+     */
     public function ChangeName(Request $request)
     {
         // body
     }
 
-
     /**
      * @authenticated
-	 * Change Password
+     * Change Password
      * @bodyParam Password string required .
      * @bodyParam New_Password string required .
      * @bodyParam New_Password_confirmation string required .
@@ -129,41 +128,41 @@ class UserController extends Controller
      * "The New_password_confirmation field is required."
      *]
      *}
-	 */
+     */
     public function ChangePassword(Request $request)
     {
-       // body 
+        // body
     }
 
-
     /**
-	 * Change Image
+     * Change Image.
+     *
      * @bodyParam Image string required the URL for the image .
      * @authenticated
-	 */
+     */
     public function ChangeImage(Request $request)
     {
-      // body 
+        // body
     }
 
-    
     /**
-	 * Delete
+     * Delete.
+     *
      * @bodyParam Password string required .
      * @authenticated
-	 */
+     */
     public function Delete(Request $request)
     {
-       // body
+        // body
     }
-    
 
     /**
-     * search for an user
+     * search for an user.
+     *
      * @bodyParam username string required search for a user by his/her username.
      */
     public function get_user()
     {
-        // to do 
+        // to do
     }
 }
