@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Book;
-use Illuminate\Http\Request;
 
 /**
  * @group Book
@@ -11,13 +10,10 @@ use Illuminate\Http\Request;
  *
  *
  * */
-
 class BookController extends Controller
 {
-
     /**
-     *
-     * List all books
+     * List all books.
      *
      * @bodyParam page int optional 1-N (default 1).
      * @bodyParam books_per_page int optional (default 10).
@@ -39,23 +35,25 @@ class BookController extends Controller
      * "author_id" : 1,
      * "author_name" : "author"
      * }
-     *
      */
     public function index()
     {
         //
     }
+
     /**
-     * Show book
+     * Show book.
+     *
      * @bodyParam book_id int required The id of the book.
      */
-    public function show ($book_id)
+    public function show($book_id)
     {
         //
     }
 
     /**
-     * Show books by genre
+     * Show books by genre.
+     *
      * @bodyParam genreName string required The Genre of list of books.
      * @bodyParam page int optional 1-N (default 1).
      * @bodyParam books_per_page int optional (default 10).
@@ -64,13 +62,14 @@ class BookController extends Controller
     {
         //
     }
+
     /**
-     * get the needed book 
+     * get the needed book.
+     *
      * @bodyParam Query string required Find books by title, author, or ISBN.
      */
     public function getBook()
     {
         //
     }
-
 }

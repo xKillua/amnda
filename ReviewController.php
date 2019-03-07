@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Review;
-use Illuminate\Http\Request;
+
 /**
  * @group Review
  * @authenticated
@@ -11,9 +11,9 @@ use Illuminate\Http\Request;
  */
 class ReviewController extends Controller
 {
-
     /**
-     * List all reviews of the authenticated user
+     * List all reviews of the authenticated user.
+     *
      * @authenticated
      */
     public function index()
@@ -22,7 +22,8 @@ class ReviewController extends Controller
     }
 
     /**
-     * Create a review
+     * Create a review.
+     *
      * @authenticated
      * @bodyParam book_id int required The book id has reviewed  to be created.
      * @bodyParam shelf int required (read,currently-reading,to-read) default is (read) .
@@ -36,7 +37,8 @@ class ReviewController extends Controller
     }
 
     /**
-     * Show a review of a specified book
+     * Show a review of a specified book.
+     *
      * @authenticated
      * @bodyParam id int required The id of the review .
      */
@@ -46,7 +48,8 @@ class ReviewController extends Controller
     }
 
     /**
-     * Edit a review
+     * Edit a review.
+     *
      * @authenticated
      * @bodyParam id int required Review Id.
      * @bodyParam review text optional The text of the review.
@@ -61,36 +64,40 @@ class ReviewController extends Controller
 
     /**
      * Recent reviews from all members.
+     *
      * @authenticated
      */
     public function recentReviews()
     {
-
     }
+
     //
+
     /**
      * Get a user's review for a given book.
+     *
      * @authenticated
      * @bodyParam user_id int required id of the user.
      * @bodyParam book_id int required  id of the book.
-     *
      */
-    public function userReview($user_id,$book_id)
+    public function userReview($user_id, $book_id)
     {
         //
     }
+
     /**
      * Get a book`s reviews by users.
+     *
      * @authenticated
      * @bodyParam book_id int required book_id you want to show its reviews.
-     *
      */
     public function bookReview($book_id)
     {
-
     }
+
     /**
-     * Remove a Review
+     * Remove a Review.
+     *
      * @authenticated
      * @bodyParam book_id int required The ID of book had a review to be deleted.
      */
