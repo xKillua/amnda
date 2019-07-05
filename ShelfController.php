@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Shelf;
 use Illuminate\Http\Request;
-
 /**
  * @group Shelf
  * @authenticated
@@ -14,7 +13,6 @@ class ShelfController extends Controller
 {
     /**
      * List all shelves of the authenticated user .
-     *
      * @authenticated
      */
     public function index()
@@ -23,8 +21,7 @@ class ShelfController extends Controller
     }
 
     /**
-     * Create a new book shelf.
-     *
+     * Create a new book shelf
      * @authenticated
      * @bodyParam shelf_name string required The name of the new shelf.
      */
@@ -34,11 +31,9 @@ class ShelfController extends Controller
     }
 
     /**
-     * Show a shelf.
-     *
+     * Show a shelf
      * @authenticated
      * @bodyParam shelf_name string required The name of the shelf.
-     *
      * @return \Illuminate\Http\Response
      */
     public function show(Shelf $shelf)
@@ -47,8 +42,7 @@ class ShelfController extends Controller
     }
 
     /**
-     * Add a book to a shelf.
-     *
+     * Add a book to a shelf
      * @authenticated
      * @bodyParam shelf_name string required The name of the shelf.
      * @bodyParam book_id int required The id of the book.
@@ -58,21 +52,19 @@ class ShelfController extends Controller
         //
     }
 
+
     /**
-     * Remove a book from a shelf.
-     *
+     * Remove a book from a shelf
      * @authenticated
      * @bodyParam shelf_name string required The name of the shelf.
      * @bodyParam book_id int required The id of the book.
      */
-    public function removeBook(Request $request)
+    public function removeBook( Request $request)
     {
         //
     }
-
     /**
-     * Get User`s shelves.
-     *
+     * Get User`s shelves
      * @authenticated
      * @bodyParam user_id int required The name of the shelf.
      * @bodyParam page int optional 1-N (default 1).
@@ -80,11 +72,10 @@ class ShelfController extends Controller
      */
     public function userShelves($user_id)
     {
-    }
 
+    }
     /**
-     * Destroy a shelf.
-     *
+     * Destroy a shelf
      * @authenticated
      * @bodyParam shelf_name string required The name of the shelf.
      */
@@ -92,14 +83,12 @@ class ShelfController extends Controller
     {
         //
     }
-
     /**
-     * show books on the shelf.
-     *
+     * show books on the shelf
      * @bodyParam user_id integer required Get the books on a members shelf.
      */
-    public function getBooksOnShelf()
-    {
+	public function getBooksOnShelf()
+	{
         //
     }
 }
